@@ -12,7 +12,7 @@ export const colors = {
   black: {
     100: '#2D3748'
   },
-  green: {
+  greenScheme: {
     100: '#319795'
   },
   gray: {
