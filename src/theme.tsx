@@ -10,7 +10,13 @@ const fonts = {
 export const colors = {
   // PUT YOUR COLORS HERE
   black: {
-    100: '#202020'
+    100: '#2D3748'
+  },
+  green: {
+    100: '#319795'
+  },
+  gray: {
+    100: '#718096'
   }
 }
 
