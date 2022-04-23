@@ -1,9 +1,10 @@
 import { Flex, Text, useMediaQuery } from '@chakra-ui/react'
+import { useRouter } from 'next/router';
 import React from 'react'
-import { colors } from '../theme'
 
 export const Header = () => {
   const  [isLargerThan720] = useMediaQuery('(min-width: 720px)');
+  const router = useRouter();
 
   return (
     <Flex 
@@ -11,11 +12,12 @@ export const Header = () => {
       position='sticky'
       top='0'
       bgColor={'white'}
-      padding='24px'
+      padding='1rem 24px'
+      borderBottom='1px solid #718096'
       alignItems='center'
       justifyContent='space-between'
     >
-      <Flex cursor='pointer'>
+      <Flex cursor='pointer' onClick={() => router.push('/')}>
         <Text 
           fontWeight={'700'}
         >
@@ -23,14 +25,11 @@ export const Header = () => {
         </Text>
       </Flex>
 
-      {/* {isLargerThan720 && (
+      {isLargerThan720 && (
         <Flex>
-          <Text pr='1.25rem' cursor='pointer' >CONTACT</Text>
-          <Text pr='1.25rem' cursor='pointer' >WORKS</Text>
-          <Text pr='1.25rem' cursor='pointer' >SERVICES</Text>
-          <Text cursor='pointer'>ABOUT</Text>
+          <Text cursor='pointer'>Github</Text>
         </Flex>
-      )} */}
+      )}
     </Flex>
   )
 }
